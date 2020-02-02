@@ -2,7 +2,7 @@
 // @name         OnCampusTweaks
 // @namespace    https://elderhs.myschoolapp.com
 // @version      0.8
-// @description  A couple tweaks for my school's website
+// @description  Change the way Elder High School's student website behaves.
 // @author       Zack Sargent
 // @match        https://elderhs.myschoolapp.com/app/student
 // @grant        none
