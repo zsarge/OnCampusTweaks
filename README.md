@@ -7,6 +7,8 @@ This is a Tampermonkey script that aims to fix some issues I have had with Black
 
 This script **only** applies to [elderhs.myschoolapp.com](elderhs.myschoolapp.com).
 
+###[Install it from GreasyFork](https://greasyfork.org/en/scripts/395961-oncampustweaks)
+
 ### Current Features:   
 -  Automatically hide completed tasks
     - By default, the assignment center loads all completed and graded tasks
