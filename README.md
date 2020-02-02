@@ -3,7 +3,7 @@
 
 This is a Tampermonkey script that aims to fix some issues I have had with Blackbaud's OnCampus system.
 
-(You can get Tampermonkey at [tampermonkey.net](https://www.tampermonkey.net/).)
+> You can get Tampermonkey at [tampermonkey.net](https://www.tampermonkey.net/).
 
 Current Features:   
 -  Automatically hides completed tasks
