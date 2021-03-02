@@ -90,6 +90,7 @@ function showGradeAverage(gradesArray) {
                 getGPADiv().textContent += `Lowest grade: ${ min }%\n | `
                 let max = Math.max(...gradesArray)
                 getGPADiv().textContent += `Highest grade: ${ max }%\n |`
+                console.log("OnCampusTweaks: Calculated and retrived grade information")
         }
                )}
 }
