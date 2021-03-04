@@ -11,11 +11,14 @@ This is a Tampermonkey script that aims to fix some issues I have had with Black
     - By default, the assignment center loads all completed and graded tasks
         - This is just unnecessary information
 - Automatically change to week view
-    - This is a personal preference
+    - This is configurable
 - Automatically show grades on progress screen
-    - Also personal preference 
+    - This is configurable
 - Display your average of all grades
 - Display your lowest and highest grades
+- Calculate unweighted GPA
     
 ### Planned Features:
-- Add button to calculate weighted & unweighted GPA (Partially Done)
+- Calculate weighted GPA
+- Calculate how well you need to do on an assignment based off of past work.
+- Hotkeys to change between views on the assignment center
