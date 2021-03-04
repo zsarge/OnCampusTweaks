@@ -63,7 +63,7 @@ function hideCompletedTasks() {
 	}
 }
 
-function AlwaysShowGrades() {
+function alwaysShowGrades() {
 	if (window.location.href.indexOf("progress") > -1) {
 		document.getElementById("showGrade").click();
 		console.log("OnCampusTweaks: Grades Shown");
@@ -92,7 +92,7 @@ var checkGrades = setInterval(function () {
 				/([0-9][0-9][0-9]|[0-9][0-9])\%/gi
 			);
 			showGradeAverage(gradesArray);
-			AlwaysShowGrades();
+			alwaysShowGrades();
 		}
 	}
 }, 500); // check every 500ms
