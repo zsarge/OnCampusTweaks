@@ -115,15 +115,19 @@ var checkGrades = setInterval(function () {
 function showGradeAverage(gradesArray) {
 	if (gradesArray) {
 		runOnce(() => {
+			let gpaDiv = getGPADiv();
 			let gpa = getGPA(gradesArray);
-			getGPADiv().textContent += `Grade Average: ${gpa}%\n | `;
+			gpaDiv.textContent += `Grade Average: ${gpa}%\n | `;
+
 			for (var i = 0; i < gradesArray.length; i++) {
 				gradesArray[i] = parseInt(gradesArray[i]);
 			}
+
 			let min = Math.min(...gradesArray);
-			getGPADiv().textContent += `Lowest grade: ${min}%\n | `;
+			gpaDiv.textContent += `Lowest grade: ${min}%\n | `;
+
 			let max = Math.max(...gradesArray);
-			getGPADiv().textContent += `Highest grade: ${max}%\n`;
+			gpaDiv.textContent += `Highest grade: ${max}%\n`;
 
 			console.log(
 				"OnCampusTweaks: Calculated and retrieved grade information"
