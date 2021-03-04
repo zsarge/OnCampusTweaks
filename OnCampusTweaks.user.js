@@ -9,14 +9,19 @@
 // ==/UserScript==
 // THIS CODE IS RELEASED UNDER THE MIT LICENSE
 
-/* Start Settings */
+/*     START SETTINGS   */
 
 // This controls whether grades should be shown
 // automatically when the progress page is opened.
 // Can be true or false.
 const shouldAlwaysShowGrades = true;
 
-/* End Settings */
+// This controls whether the assignment center should
+// change to week view when it loads.
+// Can be true or false.
+const shouldChangeToWeekView = true;
+
+/*      END SETTINGS     */
 
 // Set task index based on hostname.
 const index = window.location.hostname === "elderhs.myschoolapp.com" ? 3 : 4;
@@ -31,7 +36,9 @@ var checkExist = setInterval(function () {
 			document.readyState === "ready" ||
 			document.readyState === "complete"
 		) {
-			changeToWeekView();
+			if (shouldChangeToWeekView) {
+				changeToWeekView();
+			}
 			hideCompletedTasks();
 			clearInterval(checkExist);
 			// Run only one time. not needed to run again as the website saves your preferences for that session
