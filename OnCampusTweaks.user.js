@@ -18,6 +18,9 @@ const shouldAlwaysShowGrades = true;
 
 /* End Settings */
 
+// Set task index based on hostname.
+const index = window.location.hostname === "elderhs.myschoolapp.com" ? 3 : 4;
+
 // Runs when page is fully loaded
 // The website is set up in a way that window.onload triggers before the page is fully loaded.
 // Thus, we must check independently to see if the full page has loaded.
@@ -56,13 +59,13 @@ function hideCompletedTasks() {
 		var buttonElements = document.getElementsByClassName(
 			"pull-left btn btn-xs btn-approve status-button active"
 		);
-		buttonElements[4].click(); // Hides Completed tasks
+		buttonElements[index].click(); // Hides Completed tasks
 
 		// We have to get the buttons again because clicking on them changes the class structure
 		buttonElements = document.getElementsByClassName(
 			"pull-left btn btn-xs btn-approve status-button active"
 		);
-		buttonElements[4].click(); // Hides Graded tasks
+		buttonElements[index].click(); // Hides Graded tasks
 
 		document.getElementById("btn-filter-apply").click();
 
@@ -120,7 +123,8 @@ function showGradeAverage(gradesArray) {
 			let min = Math.min(...gradesArray);
 			getGPADiv().textContent += `Lowest grade: ${min}%\n | `;
 			let max = Math.max(...gradesArray);
-			getGPADiv().textContent += `Highest grade: ${max}%\n |`;
+			getGPADiv().textContent += `Highest grade: ${max}%\n`;
+
 			console.log(
 				"OnCampusTweaks: Calculated and retrieved grade information"
 			);
