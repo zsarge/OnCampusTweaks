@@ -1,13 +1,14 @@
 // ==UserScript==
 // @name         OnCampusTweaks
 // @namespace    https://*.myschoolapp.com
-// @version      0.9.1
+// @version      0.9.5
 // @description  Change the way any myschoolappp based student website behaves.
 // @author       Zack Sargent & N3
 // @match        https://*.myschoolapp.com/app/*
 // @grant        none
 // ==/UserScript==
 // THIS CODE IS RELEASED UNDER THE MIT LICENSE
+// Find it on github: https://github.com/zsarge/OnCampusTweaks
 
 /*     START SETTINGS   */
 
