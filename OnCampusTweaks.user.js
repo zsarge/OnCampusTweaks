@@ -9,6 +9,15 @@
 // ==/UserScript==
 // THIS CODE IS RELEASED UNDER THE MIT LICENSE
 
+/* Start Settings */
+
+// This controls whether grades should be shown
+// automatically when the progress page is opened.
+// Can be true or false.
+const shouldAlwaysShowGrades = true;
+
+/* End Settings */
+
 // Runs when page is fully loaded
 // The website is set up in a way that window.onload triggers before the page is fully loaded.
 // Thus, we must check independently to see if the full page has loaded.
@@ -81,7 +90,7 @@ function submitToVerify() {
 // -------------------
 
 var checkGrades = setInterval(function () {
-	// if the string "assignment-center" is in the url
+	// if the string "progress" is in the url
 	if (window.location.href.indexOf("progress") > -1) {
 		if (
 			document.readyState === "ready" ||
@@ -92,7 +101,10 @@ var checkGrades = setInterval(function () {
 				/([0-9][0-9][0-9]|[0-9][0-9])\%/gi
 			);
 			showGradeAverage(gradesArray);
-			alwaysShowGrades();
+
+			if (shouldAlwaysShowGrades) {
+				alwaysShowGrades();
+			}
 		}
 	}
 }, 500); // check every 500ms
